@@ -17,8 +17,8 @@
         </fieldset>
 
         <fieldset>
-            <label for="secondname">second name:</label>
-            <input id="secondname" type="text">
+            <label for="lastname">last name:</label>
+            <input id="lastname" type="text">
         </fieldset>
         <fieldset>
             <label for="mail">mail:</label>
@@ -34,10 +34,16 @@
         let form = document.querySelector("form");
         form.addEventListener("submit", function(e) {
             // get `input` from the `form
+            let firstname = document.querySelector("#firstname").value;
+            let lastname = document.querySelector("#lastname").value;
+            let mail = document.querySelector("#mail").value;
 
             // display `input` content into the console
+            console.log(firstname, lastname, mail);
 
             // put `input` values into `#fill_me`
+            let fillMe = document.querySelector("#fill_me");
+            fillMe.textContent = firstname + " " + lastname + " " + mail;
 
             // DO NOT REMOVE...
             e.preventDefault();
